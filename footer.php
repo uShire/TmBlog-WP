@@ -3,8 +3,8 @@
             <div class="container">
                  <div class="footer__wrapper">
                     <ul class="contactUs"> 
-                        <!-- <li>Contact us</li>
-                        <li>C/O Two Miles, 400 N Tustin Ave Ste 240, Santa Ana, CA 92705</li>
+                        <p>Contact us</p>
+                        <!-- <li>C/O Two Miles, 400 N Tustin Ave Ste 240, Santa Ana, CA 92705</li>
                         <li>Telephone: +714-437-5823</li>
                         <li>Email: info@twomiles.net</li>
                         <li>Website: www.twomiles.net</li> -->
@@ -17,7 +17,7 @@
                                 while( have_rows('contact_details') ) : the_row();
                         ?>
                         <li>
-                            <?php echo the_sub_field('icon')?>
+                            <span style="margin-right:10px;"><?php echo the_sub_field('icon')?></span>
                              <?php echo the_sub_field('details')?>
                          </li>
                         <?php
