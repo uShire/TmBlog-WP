@@ -1,4 +1,8 @@
 <?php wp_footer()  ?>
+
+<?php $homepage_id = get_option('page_on_front');
+echo $homepage_id;
+?>
 <footer class="footer bg--primary text--light py--5">
             <div class="container">
                  <div class="footer__wrapper">
@@ -11,10 +15,10 @@
                         <?php
 
                             // Check rows exists.
-                            if( have_rows('contact_details') ):
+                            if( have_rows('contact_details',$homepage_id) ):
 
                                 // Loop through rows.
-                                while( have_rows('contact_details') ) : the_row();
+                                while( have_rows('contact_details',$homepage_id) ) : the_row();
                         ?>
                         <li>
                             <span style="margin-right:10px;"><?php echo the_sub_field('icon')?></span>
@@ -31,15 +35,18 @@
                         ?>
                     </ul>
                     <ul class="tags">
-                        <li>Tags</li>
+                        <li class="borderNone">Tags</li>
                         <li>
-                            <a href="#">Sample Tags</a>
-                            <a href="#">Sample Tags</a>
-                            <a href="#">Sample</a>
-                            <a href="#">Sample</a>
-                            <a href="#">Sample Tags</a>
-                            <a href="#">Sample Tags</a>
-                            <a href="#">Sample Tags</a>
+                            <?php 
+                                $tags = get_tags();
+                                print_r($tags);
+                                foreach ( $tags as $tag ) :
+                                $tag_link = get_tag_link( $tag->term_id );
+                            ?>
+                        
+                            <a href="<?php echo $tag_link ?>"><?php echo $tag->name ?></a>
+
+                        <?php endforeach; ?>
                         </li>
                     </ul>
                     <div class="subNewsletter">
