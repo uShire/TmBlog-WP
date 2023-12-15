@@ -97,7 +97,7 @@
                    
 
                         </div>
-                        <a class="viewAll text--secondary" href="./single-category.html">View All</a>
+                        <a class="viewAll text--secondary" href="http://localhost/tmblog/view-by-category/?categ=brands">View All</a>
                     </div>
                 </div>
 
@@ -150,7 +150,7 @@
                             
 
                         </div>
-                        <a href="./single-category.html" class="viewAll text--secondary">View All</a>
+                        <a href="http://localhost/tmblog/view-by-category/?categ=cars" class="viewAll text--secondary">View All</a>
                     </div>
                 </div>
 
@@ -206,7 +206,7 @@
                         </div>
 
                       
-                        <a href="./single-category.html" class="viewAll text--secondary">View All</a>
+                        <a href="http://localhost/tmblog/view-by-category/?categ=wheel-drive" class="viewAll text--secondary">View All</a>
                     </div>
                 </div>
 
